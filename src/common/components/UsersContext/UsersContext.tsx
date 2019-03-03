@@ -9,7 +9,7 @@ interface UserList {
   [key: string]: User;
 }
 
-type AddUserFn = (user: User) => void;
+export type AddUserFn = (user: User) => void;
 
 interface ContextProps {
   children: React.ReactNode;
