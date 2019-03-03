@@ -1,0 +1,11 @@
+.paper {
+  padding: 20px 50px;
+  border: 1px solid #333333;
+  max-width: 600px;
+}
+
+.paper h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
