@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Redirect } from 'react-router';
-import { ViewerConsumer } from 'src/common/components/ViewerContext/ViewerContext';
+import ViewerContext from 'src/common/components/ViewerContext/ViewerContext';
 
-const Logout: React.FunctionComponent = () => (
-  <ViewerConsumer>
-    {({ clearViewer }) => {
-      clearViewer();
-      return <Redirect to="/" />;
-    }}
-  </ViewerConsumer>
-);
+const Logout: React.FunctionComponent = () => {
+  const { clearViewer } = useContext(ViewerContext);
+
+  clearViewer();
+
+  return <Redirect to="/" />;
+};
 
 export default Logout;
