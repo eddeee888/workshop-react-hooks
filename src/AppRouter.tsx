@@ -63,6 +63,23 @@ const AppRouter = () => (
                       <b>Dashboard.exercise-3.test.tsx</b>
                     </li>
                   </ul>
+                  <hr />
+                  <div>More references and resources:</div>
+                  <ul>
+                    <li>
+                      <a
+                        target="_blank"
+                        href="https://reactjs.org/docs/hooks-custom.html"
+                      >
+                        Building your own hooks
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://usehooks.com/">
+                        More hook examples
+                      </a>
+                    </li>
+                  </ul>
                 </Paper>
               )}
             />
