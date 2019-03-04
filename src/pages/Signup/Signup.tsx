@@ -84,7 +84,7 @@ class Signup extends React.Component<{}, State> {
                         type="button"
                         onClick={() => this.signUp(addUser, setViewer)}
                       >
-                        Signup
+                        Sign up
                       </button>
                     </Row>
                   </form>
