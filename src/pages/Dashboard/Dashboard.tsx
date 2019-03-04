@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router';
+import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
 import { ViewerConsumer } from 'src/common/components/ViewerContext/ViewerContext';
 
@@ -17,7 +18,12 @@ class Dashboard extends React.Component {
           if (!viewer) {
             return <Redirect to="/" />;
           }
-          return <Row>Welcome {viewer.email}!</Row>;
+          return (
+            <Paper>
+              <h1>Dashboard</h1>
+              <Row>Welcome {viewer.email}!</Row>
+            </Paper>
+          );
         }}
       </ViewerConsumer>
     );

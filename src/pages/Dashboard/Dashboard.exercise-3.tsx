@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Redirect } from 'react-router';
+import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
 import ViewerContext from 'src/common/components/ViewerContext';
 
@@ -18,7 +19,12 @@ const Dashboard: React.FunctionComponent = () => {
     return <Redirect to="/" />;
   }
 
-  return <Row>Welcome {viewer.email}!</Row>;
+  return (
+    <Paper>
+      <h1>Dashboard</h1>
+      <Row>Welcome {viewer.email}!</Row>
+    </Paper>
+  );
 };
 
 export default Dashboard;
