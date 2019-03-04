@@ -10,6 +10,7 @@ interface UserList {
 }
 
 export type AddUserFn = (user: User) => void;
+export type RemoveUserFn = (email: string) => void;
 
 interface ContextProps {
   children: React.ReactNode;
@@ -21,13 +22,15 @@ interface ContextState {
 
 interface ContextFunctions {
   addUser: AddUserFn;
+  removeUser: RemoveUserFn;
 }
 
 type ContextVariables = ContextState & ContextFunctions;
 
 const UsersContext = React.createContext<ContextVariables>({
   users: {},
-  addUser: () => {}
+  addUser: () => {},
+  removeUser: () => {}
 });
 
 const UsersConsumer = UsersContext.Consumer;
@@ -42,7 +45,8 @@ class UsersProvider extends React.Component<ContextProps, ContextState> {
       <Provider
         value={{
           users: this.state.users,
-          addUser: this.addUser
+          addUser: this.addUser,
+          removeUser: this.removeUser
         }}
       >
         {this.props.children}
@@ -59,6 +63,14 @@ class UsersProvider extends React.Component<ContextProps, ContextState> {
     this.setState({
       users: newUsers
     });
+  }
+
+  removeUser: RemoveUserFn = email => {
+    if (this.state.users && this.state.users[email]) {
+      const newUserList = { ...this.state.users };
+      delete newUserList[email];
+      this.setState({ users: newUserList });
+    }
   }
 }
 

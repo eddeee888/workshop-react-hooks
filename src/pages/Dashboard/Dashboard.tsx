@@ -8,7 +8,7 @@ class Dashboard extends React.Component {
     alert('Welcome to dashboard!');
   }
   componentWillUnmount() {
-    alert('Goodbye friend!');
+    alert('Navigating away from dashboard');
   }
   render() {
     return (
