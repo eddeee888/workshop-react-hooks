@@ -53,6 +53,33 @@ const AppRouter = () => (
                   <div>
                     Answers can be found in <b>*.answer-*.tsx</b> files.
                   </div>
+                  <hr />
+                  <div>Sample tests and notes can be found in:</div>
+                  <ul>
+                    <li>
+                      <b>Signup.exercise-2.test.tsx</b>
+                    </li>
+                    <li>
+                      <b>Dashboard.exercise-3.test.tsx</b>
+                    </li>
+                  </ul>
+                  <hr />
+                  <div>More references and resources:</div>
+                  <ul>
+                    <li>
+                      <a
+                        target="_blank"
+                        href="https://reactjs.org/docs/hooks-custom.html"
+                      >
+                        Building your own hooks
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://usehooks.com/">
+                        More hook examples
+                      </a>
+                    </li>
+                  </ul>
                 </Paper>
               )}
             />
