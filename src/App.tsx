@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import AppRouter from 'src/AppRouter';
+import Header from 'src/common/components/Header';
 import './App.css';
+import { UsersProvider } from './common/components/UsersContext/UsersContext';
+import { ViewerProvider } from './common/components/ViewerContext/ViewerContext';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <UsersProvider>
+          <ViewerProvider>
+            <Header />
+            <AppRouter />
+          </ViewerProvider>
+        </UsersProvider>
+      </>
     );
   }
 }
