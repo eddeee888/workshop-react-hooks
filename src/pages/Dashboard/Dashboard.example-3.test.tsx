@@ -18,7 +18,7 @@ import React from 'react';
 import { StaticRouter } from 'react-router';
 import { UsersProvider } from 'src/common/components/UsersContext/UsersContext';
 import { ViewerProvider } from 'src/common/components/ViewerContext/ViewerContext';
-import Dashboard from './Dashboard.exercise-3';
+import Dashboard from './Dashboard.example-3';
 
 const { act } = require('react-dom/test-utils');
 

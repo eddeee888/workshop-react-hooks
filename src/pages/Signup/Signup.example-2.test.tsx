@@ -7,7 +7,7 @@ import UsersContext, {
 import ViewerContext, {
   ViewerProvider
 } from 'src/common/components/ViewerContext/ViewerContext';
-import Signup from './Signup.exercise-2';
+import Signup from './Signup.example-2';
 
 describe('<Signup />', () => {
   it('should update email and password as we type', () => {

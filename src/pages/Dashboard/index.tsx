@@ -1,2 +1,2 @@
 export { default } from './Dashboard';
-// export { default } from './Dashboard.exercise-3';
+// export { default } from './Dashboard.example-3';
