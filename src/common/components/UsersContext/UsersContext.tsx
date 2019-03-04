@@ -16,7 +16,7 @@ interface ContextProps {
 }
 
 interface ContextState {
-  users: UserList | {};
+  users: UserList;
 }
 
 interface ContextFunctions {
