@@ -1,3 +1,24 @@
+/**
+ * Exercise 3: `useEffect`
+ *
+ * `useEffect` lets you perform side effects of a function. This can be used to replace `componentDidMount`, `componentDidUpdate` and `componentWillUnmount`
+ *
+ * `useEffect` takes a function that would be executed as a side effect. i.e. it will replace `componentDidMount` and `componentDidUpdate`.
+ * The return of said function can be a function. This function will get called when the component is unmounted i.e. it will replace `componentWillUnmount`
+ *
+ * How it works:
+ * src/pages/Dashboard/Dashboard.exercise-3.tsx
+ *
+ * Exercise:
+ * use `useEffect` to add following effects to logout component:
+ * - pop up an alert that says we are logging out
+ * - when the component is unmounting, check if user wants to delete their account. If they do, remove their user account (using `UsersContext`)
+ * src/pages/Logout/Logout.tsx
+ *
+ * Answer:
+ * src/pages/Logout/Logout.answer-3.tsx
+ */
+
 import React from 'react';
 import { Redirect } from 'react-router';
 import Paper from 'src/common/components/Paper';
