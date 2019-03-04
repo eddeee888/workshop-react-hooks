@@ -53,6 +53,16 @@ const AppRouter = () => (
                   <div>
                     Answers can be found in <b>*.answer-*.tsx</b> files.
                   </div>
+                  <hr />
+                  <div>Sample tests and notes can be found in:</div>
+                  <ul>
+                    <li>
+                      <b>Signup.exercise-2.test.tsx</b>
+                    </li>
+                    <li>
+                      <b>Dashboard.exercise-3.test.tsx</b>
+                    </li>
+                  </ul>
                 </Paper>
               )}
             />
