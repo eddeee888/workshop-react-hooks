@@ -1,2 +1,2 @@
-// export { default } from './Logout';
-export { default } from './Logout.answer-3';
+export { default } from './Logout';
+// export { default } from './Logout.answer-3';
