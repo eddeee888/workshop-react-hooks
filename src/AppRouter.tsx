@@ -57,10 +57,10 @@ const AppRouter = () => (
                   <div>Sample tests and notes can be found in:</div>
                   <ul>
                     <li>
-                      <b>Signup.exercise-2.test.tsx</b>
+                      <b>Signup.example-2.test.tsx</b>
                     </li>
                     <li>
-                      <b>Dashboard.exercise-3.test.tsx</b>
+                      <b>Dashboard.example-3.test.tsx</b>
                     </li>
                   </ul>
                   <hr />
