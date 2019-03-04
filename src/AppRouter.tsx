@@ -23,9 +23,16 @@ const AppRouter = () => (
                 <Paper>
                   <h1>Welcome to hooks workshop</h1>
                   <div>
-                    This is an introductory workshop to React hooks. In this
-                    workshop, we are going to be implementing a very simple sign
-                    up, log in, log out flow to learn the 3 most basic hooks:
+                    This is an introductory workshop for{' '}
+                    <a
+                      target="_blank"
+                      href="https://reactjs.org/docs/hooks-intro.html"
+                    >
+                      React hooks
+                    </a>
+                    . In this workshop, we are going to be implementing a very
+                    simple sign up, log in, log out flow to learn the 3 most
+                    basic hooks:
                   </div>
                   <ul>
                     <li>useState (exercise 1)</li>
@@ -33,20 +40,18 @@ const AppRouter = () => (
                     <li>useEffect (exercise 3)</li>
                   </ul>
                   <div>
-                    Description of the exercises can be found in
-                    <b>*.exercise-*.tsx</b> files.
+                    Exercises can be found in:
+                    <ul>
+                      <li>
+                        <b>Signup.tsx</b>: Exercise 1 and 2
+                      </li>
+                      <li>
+                        <b>Dashboard.tsx</b>: Exercise 3
+                      </li>
+                    </ul>
                   </div>
                   <div>
                     Answers can be found in <b>*.answer-*.tsx</b> files.
-                  </div>
-                  <div>
-                    API reference can be found on{' '}
-                    <a
-                      target="_blank"
-                      href="https://reactjs.org/docs/hooks-intro.html"
-                    >
-                      React official website
-                    </a>
                   </div>
                 </Paper>
               )}
