@@ -21,7 +21,7 @@ const AppRouter = () => (
               exact
               component={() => (
                 <Paper>
-                  <h1>Welcome to hooks workshop</h1>
+                  <h1>Introduction to hooks workshop</h1>
                   <div>
                     This is an introductory workshop for{' '}
                     <a

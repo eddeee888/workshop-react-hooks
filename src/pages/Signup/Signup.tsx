@@ -9,7 +9,8 @@
  * src/pages/Signup.exercise-1.tsx
  *
  * Exercise:
- * use `useState` to control `email` and `password` of login form
+ * - use `useState` to control `email` and `password` of login form
+ * - alert `email` and `password` when submit butto is clicked
  * src/pages/Login/Login.tsx
  *
  * Answer:

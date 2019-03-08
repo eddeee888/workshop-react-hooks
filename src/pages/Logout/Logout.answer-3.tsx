@@ -12,7 +12,6 @@ const Logout: React.FunctionComponent = () => {
   }
 
   useEffect(() => {
-    clearViewer();
     alert(`Logging out from ${viewer.email}`);
 
     return () => {
@@ -22,6 +21,7 @@ const Logout: React.FunctionComponent = () => {
       if (deleteConfirmation) {
         removeUser(viewer.email);
       }
+      clearViewer();
     };
   });
 
