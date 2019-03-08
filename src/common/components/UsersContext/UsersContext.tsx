@@ -11,6 +11,10 @@ interface UserList {
 
 export type AddUserFn = (user: User) => void;
 export type RemoveUserFn = (email: string) => void;
+export type CheckUserCredentialsFn = (
+  email: string,
+  password: string
+) => boolean;
 
 interface ContextProps {
   children: React.ReactNode;
@@ -23,6 +27,7 @@ interface ContextState {
 interface ContextFunctions {
   addUser: AddUserFn;
   removeUser: RemoveUserFn;
+  checkUserCredentials: CheckUserCredentialsFn;
 }
 
 type ContextVariables = ContextState & ContextFunctions;
@@ -30,7 +35,8 @@ type ContextVariables = ContextState & ContextFunctions;
 const UsersContext = React.createContext<ContextVariables>({
   users: {},
   addUser: () => {},
-  removeUser: () => {}
+  removeUser: () => {},
+  checkUserCredentials: () => false
 });
 
 const UsersConsumer = UsersContext.Consumer;
@@ -46,7 +52,8 @@ class UsersProvider extends React.Component<ContextProps, ContextState> {
         value={{
           users: this.state.users,
           addUser: this.addUser,
-          removeUser: this.removeUser
+          removeUser: this.removeUser,
+          checkUserCredentials: this.checkUserCredentials
         }}
       >
         {this.props.children}
@@ -71,6 +78,16 @@ class UsersProvider extends React.Component<ContextProps, ContextState> {
       delete newUserList[email];
       this.setState({ users: newUserList });
     }
+  }
+
+  checkUserCredentials: CheckUserCredentialsFn = (email, password) => {
+    const { users } = this.state;
+
+    if (!users[email] || (users[email] && users[email].password !== password)) {
+      return false;
+    }
+
+    return true;
   }
 }
 
