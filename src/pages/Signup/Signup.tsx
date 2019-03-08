@@ -10,7 +10,7 @@
  *
  * Exercise:
  * - use `useState` to control `email` and `password` of login form
- * - alert `email` and `password` when submit butto is clicked
+ * - alert `email` and `password` when submit button is clicked
  * src/pages/Login/Login.tsx
  *
  * Answer:
@@ -42,14 +42,8 @@ import React from 'react';
 import { Redirect } from 'react-router';
 import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
-import {
-  AddUserFn,
-  UsersConsumer
-} from 'src/common/components/UsersContext/UsersContext';
-import {
-  SetViewerFn,
-  ViewerConsumer
-} from 'src/common/components/ViewerContext/ViewerContext';
+import { UsersConsumer } from 'src/common/components/UsersContext/UsersContext';
+import { ViewerConsumer } from 'src/common/components/ViewerContext/ViewerContext';
 
 interface State {
   email: string;
@@ -66,18 +60,6 @@ class Signup extends React.Component<{}, State> {
   }
   setPassword = (password: string): void => {
     this.setState({ password });
-  }
-  signUp = (addUser: AddUserFn, setViewer: SetViewerFn): void => {
-    const { email, password } = this.state;
-
-    addUser({
-      email,
-      password
-    });
-
-    setViewer({
-      email
-    });
   }
   render() {
     const { email, password } = this.state;
@@ -122,7 +104,16 @@ class Signup extends React.Component<{}, State> {
                     <Row>
                       <button
                         type="button"
-                        onClick={() => this.signUp(addUser, setViewer)}
+                        onClick={() => {
+                          addUser({
+                            email,
+                            password
+                          });
+
+                          setViewer({
+                            email
+                          });
+                        }}
                       >
                         Sign up
                       </button>

@@ -11,7 +11,7 @@ const Login: React.FunctionComponent = () => {
   const [error, setError] = useState('');
 
   const { viewer, setViewer } = useContext(ViewerContext);
-  const { users } = useContext(UsersContext);
+  const { checkUserCredentials } = useContext(UsersContext);
 
   if (viewer) {
     return <Redirect to="/dashboard" />;
@@ -55,16 +55,14 @@ const Login: React.FunctionComponent = () => {
           <button
             type="button"
             onClick={() => {
-              if (!users[email]) {
-                setError('User does not exist');
-              }
+              const valid = checkUserCredentials(email, password);
 
-              if (users[email] && users[email].password !== password) {
-                setError('Incorrect password!');
-              }
-
-              if (users[email] && users[email].password === password) {
+              if (valid) {
                 setViewer({ email });
+              } else {
+                setError(
+                  'The email/password combination you entered is incorrect.'
+                );
               }
             }}
           >
