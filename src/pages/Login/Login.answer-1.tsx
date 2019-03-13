@@ -36,7 +36,9 @@ const Login: React.FunctionComponent = () => {
           </div>
         </Row>
         <Row>
-          <button type="button">Log in</button>
+          <button type="button" onClick={() => {
+            alert(`${email} ${password}`)
+          }}>Log in</button>
         </Row>
       </form>
     </Paper>

@@ -32,6 +32,7 @@
  * - get who's the logged (using `ViewerContext`)
  * - check details provided, show error (using `useState`) to user if wrong credentials (using `UsersContext`)
  * - if successful, set `viewer` (using `ViewerContext`)
+ * - if the viewer is set, use `<Redirect to='/dashboard'>` to redirect user to dashboard after logging in.
  * src/pages/Login/Login.tsx
  *
  * Answer:
