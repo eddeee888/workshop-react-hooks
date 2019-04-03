@@ -4,7 +4,7 @@ import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
 import ViewerContext from 'src/common/components/ViewerContext';
 
-const Dashboard: React.FunctionComponent = () => {
+function Dashboard() {
   const { viewer } = useContext(ViewerContext);
 
   useEffect(() => {
@@ -25,6 +25,6 @@ const Dashboard: React.FunctionComponent = () => {
       <Row>Welcome {viewer.email}!</Row>
     </Paper>
   );
-};
+}
 
 export default Dashboard;

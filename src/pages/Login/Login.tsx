@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
 
-const Login: React.FunctionComponent = () => {
+function Login() {
   return (
     <Paper>
       <h1>Log in</h1>
@@ -29,5 +29,5 @@ const Login: React.FunctionComponent = () => {
       </form>
     </Paper>
   );
-};
+}
 export default Login;

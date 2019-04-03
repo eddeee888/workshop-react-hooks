@@ -5,7 +5,7 @@ import Row from 'src/common/components/Row';
 import UsersContext from 'src/common/components/UsersContext';
 import ViewerContext from 'src/common/components/ViewerContext';
 
-const Login: React.FunctionComponent = () => {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -72,5 +72,5 @@ const Login: React.FunctionComponent = () => {
       </form>
     </Paper>
   );
-};
+}
 export default Login;

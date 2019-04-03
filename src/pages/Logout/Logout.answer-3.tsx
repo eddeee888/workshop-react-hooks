@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import UsersContext from 'src/common/components/UsersContext';
 import ViewerContext from 'src/common/components/ViewerContext/ViewerContext';
 
-const Logout: React.FunctionComponent = () => {
+function Logout() {
   const { viewer, clearViewer } = useContext(ViewerContext);
   const { removeUser } = useContext(UsersContext);
 
@@ -26,6 +26,6 @@ const Logout: React.FunctionComponent = () => {
   });
 
   return <Redirect to="/" />;
-};
+}
 
 export default Logout;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Paper from 'src/common/components/Paper';
 import Row from 'src/common/components/Row';
 
-const Login: React.FunctionComponent = () => {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -37,11 +37,11 @@ const Login: React.FunctionComponent = () => {
         </Row>
         <Row>
           <button type="button" onClick={() => {
-            alert(`${email} ${password}`)
+            alert(`${email} ${password}`);
           }}>Log in</button>
         </Row>
       </form>
     </Paper>
   );
-};
+}
 export default Login;
