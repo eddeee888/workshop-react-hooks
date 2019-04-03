@@ -5,7 +5,7 @@ import Row from 'src/common/components/Row';
 import UsersContext from 'src/common/components/UsersContext/UsersContext';
 import ViewerContext from 'src/common/components/ViewerContext/ViewerContext';
 
-const Signup: React.FunctionComponent = () => {
+function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -59,6 +59,6 @@ const Signup: React.FunctionComponent = () => {
       </form>
     </Paper>
   );
-};
+}
 
 export default Signup;

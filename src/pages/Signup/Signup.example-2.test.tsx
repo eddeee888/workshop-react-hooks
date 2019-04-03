@@ -29,7 +29,7 @@ describe('<Signup />', () => {
   });
 
   it('should register new user and log in as that user', () => {
-    const TestComponent: React.FunctionComponent = () => {
+    const TestComponent = () => {
       const { viewer } = useContext(ViewerContext);
       const { users } = useContext(UsersContext);
 

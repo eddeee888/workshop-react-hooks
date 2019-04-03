@@ -3,7 +3,7 @@ import UsersContext from 'src/common/components/UsersContext';
 import ViewerContext from 'src/common/components/ViewerContext';
 import './Footer.css';
 
-const Footer: React.FunctionComponent = () => {
+function Footer() {
   const { viewer } = useContext(ViewerContext);
   const { users } = useContext(UsersContext);
 
@@ -22,6 +22,6 @@ const Footer: React.FunctionComponent = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
